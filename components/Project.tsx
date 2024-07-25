@@ -40,7 +40,7 @@ function Project() {
         {/* <div className='mt-8'></div> */}
 
         <div className='m-10'>
-            <h1 className='px-1 md:px-10 mt-8 mb-1 md:mb-5 md:mt-20 text-2xl md:text-5xl font-bold'>Projects</h1>
+            <h1 className='px-1 md:px-10 mt-3 mb-1 md:mb-7 md:mt-10 text-3xl md:text-5xl font-bold'>Projects</h1>
             <div className='md:px-8'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
                     {projects.map((project) => {
