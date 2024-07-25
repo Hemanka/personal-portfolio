@@ -1,8 +1,8 @@
 import React from 'react'
 
 const options = [
-    {name: 'About', link: '/about'},
-    {name: 'Projects', link: '/projects'},
+    {name: 'About', link: '#about'},
+    {name: 'Projects', link: '#projects'},
 ]
 
 export default function NavBar() {

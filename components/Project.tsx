@@ -5,7 +5,7 @@ const projects = [
     {
         name: 'College Event Management System',
         description: 'A web application that helps in managing college events. It has features like event registration, event management, and event feedback. It also has a hierarchical-role based access control system for managing users and the community.',
-        languages: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL'],
+        languages: ['HTML/CSS, JavaScript, PHP, MySQL'],
         link: 'https://www.google.com/'
     },
     {
@@ -36,32 +36,34 @@ const projects = [
 
 function Project() {
   return (
-    <div className='m-10'>
-        <h1 className='mt-8 mb-3 md:mt-20 sm:text-xl md:text-3xl font-bold'>Projects</h1>
+    <section id='projects' className='pt-1'>
+        {/* <div className='mt-8'></div> */}
 
-        {/* flex flex-col md:flex-row */}
-        <div className=''>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
-                {projects.map((project) => {
-                    return <a 
-                        key={project.link}
-                        href={project.link}
-                        className='p-6'
-                    >
-                        <div>
-                            <h2 className='font-bold mb-4'>{project.name}</h2>
-                            <p className='mb-4 leading-6'>{project.description}</p>
+        <div className='m-10'>
+            <h1 className='px-1 md:px-10 mt-8 mb-1 md:mb-5 md:mt-20 text-2xl md:text-5xl font-bold'>Projects</h1>
+            <div className='md:px-8'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
+                    {projects.map((project) => {
+                        return <a 
+                            key={project.link}
+                            href={project.link}
+                            className='p-3 ml-1 md:ml-3 mr-5 my-4 border-2 border-gray-300 rounded-lg'
+                        >
                             <div>
-                                {project.languages.map((language) => {
-                                    return <span>{language}  </span>
-                                })}
+                                <h2 className='font-bold mb-4'>{project.name}</h2>
+                                <p className='mb-4 leading-7'>{project.description}</p>
+                                <div>
+                                    {project.languages.map((language) => {
+                                        return <span>{language}  </span>
+                                    })}
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                })}
+                        </a>
+                    })}
+                </div>
             </div>
         </div>
-    </div>
+    </section>
   )
 }
 
