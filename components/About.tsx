@@ -8,7 +8,11 @@ function About() {
           <p className='mt-3 pl-1 md:pl-10 md:w-3/5 w-auto leading-7'>
               Hello! I am Heamnt Kanoujia, a rising senior at University of Central Flordia majoring in Computer Science.
 
-              My CS journey started in high school, where I took my first programming class. I started by attending coding clubs because of my friends.
+              My CS journey started in high school, where I took my first programming class. It was something that started off as a casual interest but quickly turned into a passion.
+          </p>
+
+          <p className='mt-3 pl-1 md:pl-10 md:w-3/5 w-auto leading-7'>
+            Currently, I am working getting my bachelor's degree in Computer Science. I have taken courses in Data Structures, Algorithms, and Software Engineering. I have also worked on various projects that have helped me gain experience in different languages and frameworks.
           </p>
       </div>
     </section>
