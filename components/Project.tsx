@@ -55,9 +55,7 @@ function Project() {
                                 <h2 className='font-bold mb-4'>{project.name}</h2>
                                 <p className='mb-4 leading-7'>{project.description}</p>
                                 <div>
-                                    {project.languages.map((language) => {
-                                        return <span>{language}  </span>
-                                    })}
+                                        <span>{project.languages}</span>
                                 </div>
                             </div>
                         </a>

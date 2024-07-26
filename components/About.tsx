@@ -12,7 +12,7 @@ function About() {
           </p>
 
           <p className='mt-3 pl-1 md:pl-10 md:w-3/5 w-auto leading-7'>
-            Currently, I am working getting my bachelor's degree in Computer Science. I have taken courses in Data Structures, Algorithms, and Software Engineering. I have also worked on various projects that have helped me gain experience in different languages and frameworks.
+            Currently, I am working getting my bachelors degree in Computer Science. I have taken courses in Data Structures, Algorithms, and Software Engineering. I have also worked on various projects that have helped me gain experience in different languages and frameworks.
           </p>
       </div>
     </section>
