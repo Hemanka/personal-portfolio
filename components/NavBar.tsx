@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 const options = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Skills", link: "#skills" },
 ];
 
 export default function NavBar() {
