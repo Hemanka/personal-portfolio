@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 const options = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: "Skills", link: "#skills" },
 ];
 
 export default function NavBar() {
@@ -24,8 +25,7 @@ export default function NavBar() {
           x: { duration: 1 },
         }}
       >
-        <div className="flex justify-center md:justify-between item-center px-4">
-          {/* <div>HK</div> */}
+        <div className="flex justify-between item-center px-4">
           <div>
             <a
               key="welcome"
@@ -35,7 +35,7 @@ export default function NavBar() {
               HK
             </a>
           </div>
-          <div className="flex space-x-12">
+          <div className="flex space-x-6 md:space-x-12">
             {options.map((option) => {
               return (
                 <a
