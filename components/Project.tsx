@@ -1,5 +1,8 @@
+"use client";
 import { describe } from "node:test";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { init } from "next/dist/compiled/webpack/webpack";
 
 const projects = [
   {
@@ -40,20 +43,43 @@ const projects = [
 ];
 
 function Project() {
+  const title_ref = useRef(null);
+  const title_inView = useInView(title_ref, { once: true, amount: 1 });
+
   return (
     <section id="projects" className="pt-1">
-      {/* <div className='mt-8'></div> */}
-
       <div className="m-10">
-        <h1 className="px-1 md:px-10 mt-3 mb-1 md:mb-7 md:mt-10 text-3xl md:text-5xl font-bold">
-          Projects
-        </h1>
+        <motion.div
+          ref={title_ref}
+          initial={{ y: -40, opacity: 0 }}
+          animate={title_inView ? { y: 0, opacity: 1 } : {}}
+          transition={{
+            duration: 2,
+            type: "spring",
+            ease: "linear",
+            x: { duration: 1 },
+          }}
+        >
+          <h1 className="px-1 md:px-10 mt-3 mb-1 md:mb-7 md:mt-10 text-3xl md:text-5xl font-bold">
+            Projects
+          </h1>
+        </motion.div>
         <div className="md:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {projects.map((project) => {
+            {projects.map((project, index) => {
               return (
-                <a
-                  key={project.link}
+                <motion.a
+                  key={index}
+                  initial={{ y: 40, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 2,
+                    type: "spring",
+                    ease: "linear",
+                    x: { duration: 1 },
+                    delay: index * 0.1,
+                  }}
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,7 +92,7 @@ function Project() {
                       <span>{project.languages}</span>
                     </div>
                   </div>
-                </a>
+                </motion.a>
               );
             })}
           </div>
